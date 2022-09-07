@@ -1,0 +1,32 @@
+
+<!-- <div class="list-group"  *ngFor="let grp of filtredData">
+  <a *ngIf="grp.type === 'intrusion-set'" href="#" class="list-group-item list-group-item-action "
+    routerLink="/groupsInfo/:{{ grp }}" [state]="{ id: grp }">
+    {{ grp.name }}
+  </a>
+</div>
+
+ -->
+
+<div class="group">
+
+<div class="container d-flex justify-content-center" *ngFor="let grp of filtredData">
+
+  <ul class="list-group mt-5 text-white" >
+    <li *ngIf="grp.type === 'intrusion-set'" href="#"
+    routerLink="/groupsInfo/:{{ grp }}" [state]="{ id: grp }" class="list-group-item d-flex justify-content-between align-content-center">
+
+      <div class="d-flex flex-row">
+        <span class="material-icons">
+          groups
+          </span>
+                <div class="ml-2">
+          <h6 class="mb-0"> {{ grp.name }} </h6>
+        </div>
+      </div>
+
+    </li>
+  </ul>
+  
+  </div>
+</div>
